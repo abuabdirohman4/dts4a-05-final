@@ -20,7 +20,7 @@ Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun h
 
 # Submission
 
-![](https://gfycat.com/cleverhelpfulcrayfish)
+![gif](https://gfycat.com/cleverhelpfulcrayfish)
 
 Link live app [dts4a.abuabdirohman.com](https://dts4a.abuabdirohman.com/explore)
 Aplikasi News Portal dengan menggunakan API [TheNewsAPI](https://www.thenewsapi.com/), dengan fitur :
