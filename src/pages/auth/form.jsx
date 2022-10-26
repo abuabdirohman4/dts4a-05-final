@@ -7,7 +7,6 @@ function Form({
   questionText,
   redirectText,
   page,
-  changePage,
   credential,
   onChange,
   onSubmit,
@@ -77,24 +76,12 @@ function Form({
             {questionText}{" "}
             <span
               onClick={() => {
-                console.log("apa ini", page);
-                // page === "login" ? changePage("register") : changePage("login");
                 page === "login" ? navigate("/register") : navigate("/login");
               }}
               className="text-black-80 hover:underline "
             >
               {redirectText}
             </span>
-            {/* <Link
-              onClick={() => {
-                console.log("apa ini", page);
-                page === "login" ? changePage("register") : changePage("login");
-              }}
-              to={page === "login" ? "../auth/register" : "auth/login"}
-              className="text-black-80 hover:underline "
-            >
-              {redirectText}
-            </Link> */}
           </div>
         </form>
       </div>

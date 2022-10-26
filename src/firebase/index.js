@@ -50,7 +50,8 @@ const logout = async () => {
   try {
     await signOut(auth);
   } catch (err) {
-    console.log(err);
+    console.log("CODE", err.code);
+    console.log("MESSAGE", err.message);
   }
 };
 

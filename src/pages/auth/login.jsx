@@ -22,8 +22,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await login(credential.email, credential.password);
-    console.log("res", res);
+    await login(credential.email, credential.password);
     navigate("/");
   };
 

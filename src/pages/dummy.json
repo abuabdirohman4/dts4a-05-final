@@ -1,0 +1,90 @@
+{
+    "meta": {
+        "found": 66519022,
+        "returned": 5,
+        "limit": 5,
+        "page": 1
+    },
+    "data": [
+        {
+            "uuid": "4255c18d-d8f9-494f-8d93-dc61cfdd75ec",
+            "title": "Kejriwal Appeals To Centre To Put Lakshmi, Ganesha Photos On Currency Notes",
+            "description": "If there is a photo of Lakshmi-Ganesha on our currency (notes), our country will prosper, Kejriwal said, , arvind kejriwal, Goddess Lakshmi, Lord Ganesha, curre...",
+            "keywords": ", arvind kejriwal, Goddess Lakshmi, Lord Ganesha, currency notes",
+            "snippet": "Delhi chief minister Arvind Kejriwal on Wednesday appealed to the central government to print Indian deities, Goddess Lakshmi and Lord Ganesha, on Indian curren...",
+            "url": "https://www.businessworld.in/article/Kejriwal-Appeals-To-Centre-To-Put-Lakshmi-Ganesha-Photos-On-Currency-Notes/26-10-2022-451751/",
+            "image_url": "https://static.businessworld.in/article/article_extra_large_image/1605696084_xiy0qU_arvind.jpg",
+            "language": "en",
+            "published_at": "2022-10-26T13:13:52.000000Z",
+            "source": "businessworld.in",
+            "categories": [
+                "business",
+                "general"
+            ],
+            "relevance_score": null
+        },
+        {
+            "uuid": "70d89671-65bc-4ce0-9d39-c8761fa4bedd",
+            "title": "Filipa Patão promete Benfica responsável contra o Bayern Munique",
+            "description": "A treinadora do futebol feminino do Benfica, Filipa Patão, prometeu hoje uma equipa a assumir \"a responsabilidade do momento\", mas também com ambição de ven...",
+            "keywords": "noticias, nacional, internacional, economia, politica, desporto, fama, mundo, pais, futebol, tecnologia, cultura",
+            "snippet": "As 'encarnadas' foram goleadas por 9-0 pelo Barcelona, na primeira jornada do grupo D, mas, apesar de assumir que \"nenhuma equipa do Benfica pode sofrer um resu...",
+            "url": "https://www.noticiasaominuto.com/desporto/2100227/filipa-patao-promete-benfica-responsavel-contra-o-bayern-munique",
+            "image_url": "https://media-manager.noticiasaominuto.com/1280/naom_6331cad184960.jpg?crop_params=eyJsYW5kc2NhcGUiOnsiY3JvcFdpZHRoIjoxMjkxLCJjcm9wSGVpZ2h0Ijo3MjYsImNyb3BYIjoxNDAsImNyb3BZIjotMX19",
+            "language": "pt",
+            "published_at": "2022-10-26T13:13:43.000000Z",
+            "source": "noticiasaominuto.com",
+            "categories": [
+                "sports"
+            ],
+            "relevance_score": null
+        },
+        {
+            "uuid": "3b6f0762-19e6-4b83-bd75-b5b1ee5e54a3",
+            "title": "KAIST-NYU, 디지털전환 난제해결 방안 모색",
+            "description": "한국과학기술원(KAIST)은 오는 28일 한국프레스센터에서 ‘KAIST-NYU(뉴욕대학교) 디지털 거버넌스 포럼’을 개최한다. 이번 ...",
+            "keywords": "헤럴드경제, 헤경, heraldcorp, 경제지, 신문, 뉴스, 보도, 속보, 정치, 경제, 사회, 국제, 문화, 사설, 컬럼, News, Newspaper, Korea, South Korea, Rep.Korea",
+            "snippet": "- 28일 디지털 거버넌스 포럼 개최\n\n\n\n이광형(왼쪽) KAIST 총장과 앤드류 해밀턴 NYU 총장이 지난달 21일(현지시간) 미국 NYU에?...",
+            "url": "https://biz.heraldcorp.com/view.php?ud=20221026000532",
+            "image_url": "https://res.heraldm.com/content/image/2022/10/26/20221026000510_p.jpg",
+            "language": "ko",
+            "published_at": "2022-10-26T13:13:31.000000Z",
+            "source": "biz.heraldcorp.com",
+            "categories": [
+                "general"
+            ],
+            "relevance_score": null
+        },
+        {
+            "uuid": "54990498-b254-4d3d-a3cc-9143d3c773db",
+            "title": "How votes are cast and counted is increasingly decided in courtrooms",
+            "description": "In America, election season has turned into lawsuit season.",
+            "keywords": "",
+            "snippet": "Listen Comment Gift Article Share\n\nMADISON, Wis. — In the United States, election season has turned into lawsuit season. One legal challenge in Michigan seeks...",
+            "url": "https://www.washingtonpost.com/politics/2022/10/26/2022-election-lawsuits-legal-challenges/",
+            "image_url": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A5GDN3CECUI63C5MYIFVAUVS4U.jpg&w=1440",
+            "language": "en",
+            "published_at": "2022-10-26T13:13:21.000000Z",
+            "source": "washingtonpost.com",
+            "categories": [
+                "politics",
+                "general"
+            ],
+            "relevance_score": null
+        },
+        {
+            "uuid": "265ce77f-ea3b-430e-82b5-092fe92d5973",
+            "title": "세종시교육청, '우리 땅, 독도 전시회' 열어",
+            "description": "세종특별자치시교육청은 독도의 날을 맞아 11월1일까지 본청 1층 한누리길 그림산책과 세종호수공원 송담만리전시관에?...",
+            "keywords": "",
+            "snippet": "(사진=세종교육청)\n\n세종특별자치시교육청은 독도의 날을 맞아 11월1일까지 본청 1층 한누리길 그림산책과 세종호수공원 ...",
+            "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1615070",
+            "image_url": "http://cdn.shinailbo.co.kr/news/thumbnail/202210/1615070_787206_130_v150.jpg",
+            "language": "ko",
+            "published_at": "2022-10-26T13:13:20.000000Z",
+            "source": "shinailbo.co.kr",
+            "categories": [],
+            "relevance_score": null
+        }
+    ]
+}

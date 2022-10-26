@@ -10,8 +10,6 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const [user] = useAuthState(auth);
 
-  console.log("user", user);
-
   const handleLogout = () => {
     logout();
     navigate("/login");
