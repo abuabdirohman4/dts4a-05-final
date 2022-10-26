@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import Register from "../pages/auth/register";
 import Login from "../pages/auth/login";
 import Home from "../pages/home";
+import Explore from "../pages/explore";
+import Details from "../pages/details";
 
 function AppRoutes() {
   return (
@@ -36,6 +38,8 @@ function AppRoutes() {
         }
       >
         <Route index element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/details" element={<Details />} />
       </Route>
     </Routes>
   );
