@@ -73,7 +73,7 @@ function Navbar() {
                 <span className="sr-only">Open user menu</span>
                 <img
                   className="m-auto h-8 w-8 rounded-full"
-                  src="https://ui-avatars.com/api/?name=Panti+Rapih&background=444444&color=fff"
+                  src="https://ui-avatars.com/api/?name=News+Portal&background=444444&color=fff"
                   alt="profile"
                 />
               </label>

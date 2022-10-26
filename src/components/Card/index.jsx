@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import imgPost from "../../assets/images/post.png";
 
-function Card() {
+function Card({ link }) {
   return (
     <div className="bg-white mb-6 max-w-sm">
-      <a href="/">
+      <Link to="/details">
         <img src={imgPost} alt="" className="w-full rounded-lg" />
-      </a>
+      </Link>
       <div className="py-5">
-        <a href="/">
+        <Link to="/">
           <h5 className="mb-2 font-playfair text-base font-bold tracking-tight text-gray-900 md:text-lg lg:text-2xl">
             News Title Lorem Ipsum Dolor Sit Amet
           </h5>
-        </a>
-        <a href="/" className="md:text-xs  text-[10px] text-black-20">
+        </Link>
+        <Link to="/" className="text-[10px]  text-black-20 md:text-xs">
           <p className="mb-3 inline font-normal">1 Hour Ago</p>
           <p className="ml-6 inline">CNN Indonesia</p>
-        </a>
+        </Link>
       </div>
     </div>
   );

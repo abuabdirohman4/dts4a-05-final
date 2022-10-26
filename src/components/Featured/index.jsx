@@ -3,7 +3,7 @@ import imgFeatured from "../../assets/images/Featured.png";
 
 function Featured() {
   return (
-    <div className="flex ">
+    <div className="flex">
       <a
         href="/"
         className="bg-white relative flex w-full flex-col items-center rounded-lg md:flex-row xl:w-[76%] xl:p-5 xl:pl-0"
