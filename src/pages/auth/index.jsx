@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { auth, register, login } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -9,6 +9,7 @@ function Auth() {
   const params = useParams();
   const navigate = useNavigate();
   const [page, setPage] = useState("login");
+  console.log("page", page);
   const [user] = useAuthState(auth);
   // const [isLoading, setIsLoading] = useState(false);
   const [credential, setCredential] = useState({
