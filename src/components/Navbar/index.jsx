@@ -5,13 +5,13 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white-80 rounded border-gray-200 px-2 py-2.5 sm:px-4">
+    <nav className="rounded border-gray-200 bg-white-80 px-2 py-2.5 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between font-playfair text-base font-bold">
         <a href="https://flowbite.com/" className="flex items-center">
           <span className="self-center whitespace-nowrap rounded-md bg-black-80 p-1.5 text-white-60">
             News
           </span>
-          <span className="ml-2 text-black-80">Portal</span>
+          <span className="ml-1.5 text-black-80">Portal</span>
         </a>
         <div className="flex md:order-2">
           <button
@@ -111,7 +111,7 @@ function Navbar() {
               placeholder="Search..."
             />
           </div>
-          <ul className="md:bg-white md mt-4 flex flex-col rounded-lg border border-gray-100p-4  md:mt-0 md:flex-row md:space-x-8 md:border-0 md:text-sm md:font-medium">
+          <ul className="md:bg-white md border-gray-100p-4 mt-4 flex flex-col rounded-lg border  md:mt-0 md:flex-row md:space-x-8 md:border-0 md:text-sm md:font-medium">
             <li>
               <a
                 href="/"
