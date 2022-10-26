@@ -1,10 +1,21 @@
 import React from "react";
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { auth, logout } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 import Footer from "../Footer";
 
 function Navbar() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [user] = useAuthState(auth);
+
+  console.log("user", user);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
 
   return (
     <>
@@ -70,10 +81,12 @@ function Navbar() {
                 tabIndex={0}
                 className=" flex h-10 w-10 rounded-lg text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:ml-3"
               >
-                <span className="sr-only">Open user menu</span>
                 <img
                   className="m-auto h-8 w-8 rounded-full"
-                  src="https://ui-avatars.com/api/?name=News+Portal&background=444444&color=fff"
+                  src={
+                    user &&
+                    `https://ui-avatars.com/api/?name=${user.email}&background=444444&color=fff`
+                  }
                   alt="profile"
                 />
               </label>
@@ -81,57 +94,23 @@ function Navbar() {
                 tabIndex={0}
                 className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow"
               >
+                {/* <!-- Dropdown menu --> */}
                 <div className="py-3 px-4">
-                  <span className=" block text-sm text-gray-900">
-                    Bonnie Green
-                  </span>
                   <span className="block truncate text-sm font-medium text-gray-500 ">
-                    name@flowbite.com
+                    {user && user.email}
                   </span>
                 </div>
                 <ul className="py-1" aria-labelledby="user-menu-button">
                   <li>
-                    <a
-                      href="/"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                    <button
+                      onClick={handleLogout}
+                      className="block py-2 px-4 text-left text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-800"
                     >
                       Sign out
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </ul>
-              {/* <!-- Dropdown menu --> */}
-              <div
-                tabIndex={0}
-                className="bg-white dropdown-content z-50 my-4 hidden list-none divide-y divide-gray-100 rounded text-base shadow"
-              >
-                <div className="py-3 px-4">
-                  <span className=" block text-sm text-gray-900">
-                    Bonnie Green
-                  </span>
-                  <span className="block truncate text-sm font-medium text-gray-500 ">
-                    name@flowbite.com
-                  </span>
-                </div>
-                <ul className="py-1" aria-labelledby="user-menu-button">
-                  <li>
-                    <a
-                      href="/"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Dashboard
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Sign out
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </div>
 
             <button
@@ -139,7 +118,6 @@ function Navbar() {
               className="inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
               onClick={() => setOpen(!open)}
             >
-              <span className="sr-only">Open menu</span>
               <svg
                 className="h-6 w-6"
                 aria-hidden="true"
@@ -185,11 +163,11 @@ function Navbar() {
                 placeholder="Search..."
               />
             </div>
-            <ul className="md:bg-white md border-gray-100p-4 mt-4 flex flex-col rounded-lg border  md:mt-0 md:flex-row md:space-x-8 md:border-0 md:text-sm md:font-medium">
+            <ul className="md:bg-white md border-gray-100p-4 mt-4 flex flex-col rounded-lg border md:mt-0 md:flex-row md:space-x-8 md:border-0 md:text-sm md:font-medium">
               <li>
                 <Link
                   to="/"
-                  className="block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200  md:p-0 md:hover:bg-transparent md:hover:text-black-80 "
+                  className="block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200 md:p-2 md:hover:rounded-md md:hover:text-black-80 "
                 >
                   Home
                 </Link>
@@ -197,7 +175,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/explore"
-                  className=" block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200  md:p-0 md:hover:bg-transparent md:hover:text-black-80 "
+                  className=" block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200 md:p-2 md:hover:rounded-md md:hover:text-black-80 "
                 >
                   Explore
                 </Link>
@@ -205,7 +183,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/details"
-                  className=" block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200  md:p-0 md:hover:bg-transparent md:hover:text-black-80 "
+                  className=" block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200 md:p-2 md:hover:rounded-md md:hover:text-black-80 "
                 >
                   Details
                 </Link>
