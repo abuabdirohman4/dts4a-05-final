@@ -20,8 +20,6 @@ Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun h
 
 # Submission
 
-![gif](https://gfycat.com/cleverhelpfulcrayfish)
-
 Link live app [dts4a.abuabdirohman.com](https://dts4a.abuabdirohman.com/explore)
 Aplikasi News Portal dengan menggunakan API [TheNewsAPI](https://www.thenewsapi.com/), dengan fitur :
 
@@ -32,3 +30,6 @@ Aplikasi News Portal dengan menggunakan API [TheNewsAPI](https://www.thenewsapi.
 - Halaman Detail setiap News
 - Halaman Explore (berisi 5 news & fitur searching)
 - Searching News
+
+GIF Demo di public->dts4a-05-final.gif
+![GIF Demo](https://github.com/abuabdirohman4/dts4a-05-final/blob/main/public/dts4a-05-final.gif)
