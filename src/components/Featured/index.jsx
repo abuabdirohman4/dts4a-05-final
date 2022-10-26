@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imgFeatured from "../../assets/images/Featured.png";
 
-function Featured({ link }) {
+function Featured({
+  link,
+  title,
+  published_at,
+  source,
+  image,
+  description,
+  snippet,
+}) {
+  console.log("link iamge", image);
   return (
     <div className="flex">
       <Link
@@ -11,16 +19,16 @@ function Featured({ link }) {
       >
         <img
           className="mt-4 w-full rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg xl:mt-0"
-          src={imgFeatured}
+          src={image}
           alt=""
         />
         <div className="absolute bottom-5 ml-5 text-white-80 md:bottom-12 xl:bottom-20 xl:ml-6">
           <h5 className="mb-2 w-[90%] font-playfair text-base font-bold tracking-tight md:text-3xl xl:w-1/2 xl:text-4xl">
-            Massa tortor nibh nulla condimentum imperdiet scelerisque...
+            {title}
           </h5>
           <div className="text-xs md:mt-4 xl:mt-6 xl:text-base">
-            <p className="mb-3 inline font-normal ">1 Hour Ago</p>
-            <p className="ml-6 inline">CNN Indonesia</p>
+            <p className="mb-3 inline font-normal ">{published_at}</p>
+            <p className="ml-6 inline">{source}</p>
           </div>
         </div>
       </Link>
@@ -29,11 +37,7 @@ function Featured({ link }) {
         className="my-10 flex hidden w-[24%] flex-col justify-between p-4 font-playfair leading-normal xl:block"
       >
         <p className="mb-3 text-lg font-normal text-gray-700">
-          Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam ornare
-          adipiscing. Pellentesque sed turpis nunc gravida pharetra, sit nec
-          vivamus pharetra. Velit, dui, egestas nisi, elementum mattis mauris,
-          magnis. Massa tortor nibh nulla condimentum imperdiet scelerisque...
-          read more
+          {description} {snippet}
         </p>
       </Link>
     </div>

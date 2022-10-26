@@ -44,13 +44,13 @@ function Details() {
         <h1 className="my-5 text-lg font-bold md:text-2xl xl:text-3xl">
           HOT TOPICS
         </h1>
-        <a href="/" className="bg-white relative rounded-lg md:flex-row">
+        <div className="bg-white relative rounded-lg md:flex-row">
           <img
             className="w-full rounded-t-lg object-cover md:rounded-none md:rounded-l-lg"
             src={data.image}
             alt=""
           />
-        </a>
+        </div>
         <h1 className="mt-10 mb-2 text-xl font-bold md:text-3xl xl:text-4xl">
           {" "}
           {data.title}
@@ -62,7 +62,10 @@ function Details() {
         <p className="mb-3 mt-5 text-sm font-normal leading-7 text-gray-700 md:mt-10 md:text-base md:leading-8 lg:text-lg lg:leading-10">
           {data.description} <br />
           {data.snippet} <br />
-          Full Article can read at <a href={data.url} className="text-blue-500 hover:text-blue-400">{data.url}</a> 
+          Full Article can read at{" "}
+          <a href={data.url} className="text-blue-500 hover:text-blue-400">
+            {data.url}
+          </a>
         </p>
       </div>
     </div>

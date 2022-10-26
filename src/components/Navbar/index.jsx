@@ -178,14 +178,6 @@ function Navbar() {
                   Explore
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/details"
-                  className=" block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200 md:p-2 md:hover:rounded-md md:hover:text-black-80 "
-                >
-                  Details
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
