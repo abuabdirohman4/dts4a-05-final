@@ -1,27 +1,28 @@
 import React from "react";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../Footer";
 
-function Navbar({ children }) {
+function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <nav className="rounded border-gray-200 bg-white-80 px-2 py-2.5 sm:px-4">
         <div className="container mx-auto flex flex-wrap items-center justify-between font-playfair text-base font-bold">
-          <a href="https://flowbite.com/" className="flex items-center">
+          {/* Logo */}
+          <a href="/" className="flex items-center">
             <span className="self-center whitespace-nowrap rounded-md bg-black-80 p-1.5 text-white-60">
               News
             </span>
             <span className="ml-1.5 text-black-80">Portal</span>
           </a>
+
+          {/* Search */}
           <div className="flex md:order-2">
             <button
               type="button"
-              data-collapse-toggle="navbar-search"
-              aria-controls="navbar-search"
-              aria-expanded="false"
-              className="mr-1 rounded-lg p-2.5 text-sm  text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200  md:hidden"
+              className="mr-1 rounded-lg p-2.5 text-sm  text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 md:hidden"
             >
               <svg
                 className="h-5 w-5"
@@ -57,13 +58,83 @@ function Navbar({ children }) {
               </div>
               <input
                 type="text"
-                id="search-navbar"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 placeholder="Search..."
               />
             </div>
+
+            {/* User Profile */}
+            <div className="dropdown-end dropdown">
+              <label
+                type="button"
+                tabIndex={0}
+                className=" flex h-10 w-10 rounded-lg text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:ml-3"
+              >
+                <span className="sr-only">Open user menu</span>
+                <img
+                  className="m-auto h-8 w-8 rounded-full"
+                  src="https://ui-avatars.com/api/?name=Panti+Rapih&background=444444&color=fff"
+                  alt="profile"
+                />
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow"
+              >
+                <div className="py-3 px-4">
+                  <span className=" block text-sm text-gray-900">
+                    Bonnie Green
+                  </span>
+                  <span className="block truncate text-sm font-medium text-gray-500 ">
+                    name@flowbite.com
+                  </span>
+                </div>
+                <ul className="py-1" aria-labelledby="user-menu-button">
+                  <li>
+                    <a
+                      href="/"
+                      className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Sign out
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+              {/* <!-- Dropdown menu --> */}
+              <div
+                tabIndex={0}
+                className="bg-white dropdown-content z-50 my-4 hidden list-none divide-y divide-gray-100 rounded text-base shadow"
+              >
+                <div className="py-3 px-4">
+                  <span className=" block text-sm text-gray-900">
+                    Bonnie Green
+                  </span>
+                  <span className="block truncate text-sm font-medium text-gray-500 ">
+                    name@flowbite.com
+                  </span>
+                </div>
+                <ul className="py-1" aria-labelledby="user-menu-button">
+                  <li>
+                    <a
+                      href="/"
+                      className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Sign out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <button
-              data-collapse-toggle="navbar-search"
               type="button"
               className="inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
               onClick={() => setOpen(!open)}
@@ -84,6 +155,8 @@ function Navbar({ children }) {
               </svg>
             </button>
           </div>
+
+          {/* List Menu */}
           <div
             className={`${
               !open && "hidden"
@@ -108,7 +181,6 @@ function Navbar({ children }) {
               </div>
               <input
                 type="text"
-                id="search-navbar"
                 className=" block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500   sm:text-sm"
                 placeholder="Search..."
               />
@@ -127,15 +199,7 @@ function Navbar({ children }) {
                   href="/"
                   className=" block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200  md:p-0 md:hover:bg-transparent md:hover:text-black-80 "
                 >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="block rounded py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-200  md:p-0 md:hover:bg-transparent md:hover:text-black-80"
-                >
-                  Services
+                  Explore
                 </a>
               </li>
             </ul>
@@ -143,6 +207,7 @@ function Navbar({ children }) {
         </div>
       </nav>
       <Outlet />
+      <Footer />
     </>
   );
 }
