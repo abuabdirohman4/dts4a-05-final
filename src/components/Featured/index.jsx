@@ -6,22 +6,24 @@ function Featured() {
     <div className="flex ">
       <a
         href="/"
-        className="bg-white relative flex w-[76%] flex-col items-center rounded-lg p-5 pl-0 md:flex-row"
+        className="bg-white relative flex w-full flex-col items-center rounded-lg md:flex-row xl:w-[76%] xl:p-5 xl:pl-0"
       >
         <img
-          className="w-full rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg "
+          className="mt-4 w-full rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg xl:mt-0"
           src={imgFeatured}
           alt=""
         />
-        <h5 className="absolute bottom-[6rem] ml-6 mb-2 w-1/2 font-playfair text-3xl font-bold tracking-tight text-white-80">
-          Massa tortor nibh nulla condimentum imperdiet scelerisque...
-        </h5>
-        <div className="absolute bottom-[4rem] ml-6 text-white-80">
-          <p className="mb-3 inline font-normal ">1 Hour Ago</p>
-          <p className="ml-6 inline">CNN Indonesia</p>
+        <div className="absolute bottom-5 ml-5 text-white-80 md:bottom-12 xl:bottom-20 xl:ml-6">
+          <h5 className="mb-2 w-[90%] font-playfair text-base font-bold tracking-tight md:text-3xl xl:w-1/2 xl:text-4xl">
+            Massa tortor nibh nulla condimentum imperdiet scelerisque...
+          </h5>
+          <div className="text-xs md:mt-4 xl:mt-6 xl:text-base">
+            <p className="mb-3 inline font-normal ">1 Hour Ago</p>
+            <p className="ml-6 inline">CNN Indonesia</p>
+          </div>
         </div>
       </a>
-      <div className="flex w-[24%] flex-col justify-between p-4 my-10 font-playfair leading-normal">
+      <div className="my-10 flex hidden w-[24%] flex-col justify-between p-4 font-playfair leading-normal xl:block">
         <p className="mb-3 text-lg font-normal text-gray-700">
           Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam ornare
           adipiscing. Pellentesque sed turpis nunc gravida pharetra, sit nec
