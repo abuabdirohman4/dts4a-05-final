@@ -1,14 +1,10 @@
 import React, { useEffect } from "react";
-import imgFeatured from "../../assets/images/Featured.png";
 import { useParams } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../../utils/fetch";
 import { useState } from "react";
 
 function Details() {
   const params = useParams();
-  console.log("params", params);
-  console.log("params uuid", params.uuid);
   const [data, setData] = useState({
     title: "",
     image: "",
@@ -35,7 +31,8 @@ function Details() {
   };
 
   useEffect(() => {
-    // fetchOneData();
+    fetchOneData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
