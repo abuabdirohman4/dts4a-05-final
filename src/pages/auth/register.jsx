@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { register } from "../../firebase";
-// import { auth, register } from "../../firebase";
-// import { useAuthState } from "react-firebase-hooks/auth";
 import Form from "./form";
 
 function Register() {
   const navigate = useNavigate();
-  // const [user, isLoading] = useAuthState(auth);
   const [credential, setCredential] = useState({
     email: "",
     password: "",

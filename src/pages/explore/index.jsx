@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
 import Card from "../../components/Card";
+import Loader from "../../components/Loader";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllData } from "../../redux/news/actions";
-// import news from "../dummy.json";
+import { fetchAllData, setKeyword } from "../../redux/news/actions";
 
 function Explore() {
-  const redux = useSelector((state) => state.news.data);
+  const redux = useSelector((state) => state.news);
+  const data = redux.data;
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchAllData());
-  }, [dispatch]);
-
-  // const redux = news.data;
+  }, [dispatch, redux.keyword]);
 
   return (
     <div className="bg-white flex rounded  px-2 pt-2.5 sm:px-4">
       <div className="container mx-auto mb-10">
         <div className="mt-5 mb-4 flex flex-wrap justify-between xl:flex-row">
           <h1 className="text-3xl font-bold">Explore Our News</h1>
-          <div className="mb-3 md:mb-0 md:w-auto w-full">
+          <div className="mb-3 w-full md:mb-0 md:w-auto">
             <button
               type="button"
               className="mr-1 rounded-lg p-2.5 text-sm  text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 md:hidden"
@@ -47,14 +46,21 @@ function Explore() {
                 type="text"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 placeholder="Search..."
+                value={redux.keyword}
+                onChange={(e) => {
+                  dispatch(setKeyword(e.target.value));
+                }}
               />
             </div>
           </div>
         </div>
 
         <div className="grid grid-flow-col grid-rows-4 gap-4 md:grid-rows-3 xl:grid-rows-2">
-          {redux &&
-            redux.map((data, index) => (
+          {redux.status === "process" ? (
+            <Loader />
+          ) : (
+            data &&
+            data.map((data, index) => (
               <Card
                 key={index}
                 link={"/details"}
@@ -63,7 +69,8 @@ function Explore() {
                 source={data.source}
                 image={data.image_url}
               />
-            ))}
+            ))
+          )}
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import {
   ERROR_FETCHING,
   SET_KEYWORD,
-  // SET_LIMIT,
+  SET_LIMIT,
   SET_PAGE,
   START_FETCHING,
   SUCCESS_FETCHING,
@@ -20,7 +20,7 @@ const initialState = {
   found: 0,
   page: 1,
   keyword: "",
-  limit: 8,
+  limit: 5,
 };
 
 export default function reducer(state = initialState, action) {
@@ -35,7 +35,6 @@ export default function reducer(state = initialState, action) {
         status: statusList.success,
         data: action.news,
         found: action.found,
-        limit: action.limit,
       };
     case SET_PAGE:
       return {
@@ -47,11 +46,11 @@ export default function reducer(state = initialState, action) {
         ...state,
         keyword: action.keyword,
       };
-    // case SET_LIMIT:
-    //   return {
-    //     ...state,
-    //     limit: action.limit,
-    //   };
+    case SET_LIMIT:
+      return {
+        ...state,
+        limit: action.limit,
+      };
     default:
       return state;
   }

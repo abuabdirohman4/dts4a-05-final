@@ -39,7 +39,6 @@ export const fetchAllData = () => {
       let params = {
         page: getState().news?.page,
         search: getState().news?.keyword,
-        limit: getState().news?.limit,
       };
 
       let res = await debouncedFetchTalents(`/all`, params);

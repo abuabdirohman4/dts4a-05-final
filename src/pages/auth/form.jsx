@@ -15,12 +15,6 @@ function Form({
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="bg-white w-full max-w-sm rounded-lg border border-gray-200 p-4 shadow-md sm:p-6 md:p-8">
-        <div
-          className="mb-4 rounded-lg bg-green-100 p-4 text-sm text-green-700 dark:bg-green-200 dark:text-green-800"
-          role="alert"
-        >
-          Successfully
-        </div>
         <form className="space-y-6" onSubmit={onSubmit}>
           <h5 className="text-xl font-medium text-gray-900">
             {title}{" "}

@@ -10,7 +10,6 @@ function Featured({
   description,
   snippet,
 }) {
-  console.log("link iamge", image);
   return (
     <div className="flex">
       <Link

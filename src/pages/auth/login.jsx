@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { login } from "../../firebase";
-// import { auth, register } from "../../firebase";
-// import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import Form from "./form";
 
 function Login() {
-  // const [user, isLoading] = useAuthState(auth);
   const navigate = useNavigate();
   const [credential, setCredential] = useState({
     email: "",
