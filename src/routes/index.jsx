@@ -1,18 +1,42 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Auth from "../pages/auth";
-// import Login from "../pages/auth/login";
-// import Register from "../pages/auth/register";
+import GuardRoute from "../components/GuardRoute";
+import Navbar from "../components/Navbar";
+
+import Register from "../pages/auth/register";
+import Login from "../pages/auth/login";
 import Home from "../pages/home";
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/auth" element={<Auth />} />
-      <Route path="/auth/:page" element={<Auth />} />
-      {/* <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} /> */}
+      <Route
+        path="/login"
+        element={
+          <GuardRoute>
+            <Login />
+          </GuardRoute>
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          <GuardRoute>
+            <Register />
+          </GuardRoute>
+        }
+      />
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <GuardRoute />
+          </>
+        }
+      >
+        <Route index element={<Home />} />
+      </Route>
     </Routes>
   );
 }

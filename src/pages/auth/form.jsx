@@ -79,9 +79,7 @@ function Form({
               onClick={() => {
                 console.log("apa ini", page);
                 // page === "login" ? changePage("register") : changePage("login");
-                page === "login"
-                  ? navigate("/auth/register")
-                  : navigate("/auth/login");
+                page === "login" ? navigate("/register") : navigate("/login");
               }}
               className="text-black-80 hover:underline "
             >

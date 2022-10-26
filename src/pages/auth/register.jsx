@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth, register } from "./firebase";
+import { useNavigate } from "react-router-dom";
+import { auth, register } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useEffect } from "react";
+import Form from "./form";
 
 function Register() {
   const navigate = useNavigate();
@@ -25,72 +25,17 @@ function Register() {
     navigate("/login");
   };
 
-  useEffect(() => {
-    if (isLoading) {
-    }
-  }, []);
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="bg-white w-full max-w-sm rounded-lg border border-gray-200 p-4 shadow-md sm:p-6 md:p-8">
-        <form className="space-y-6" onSubmit={handleSubmit}>
-          <h5 className="text-xl font-medium text-gray-900">
-            Create account{" "}
-            <span className="translate-y-3 self-center whitespace-nowrap rounded-md bg-black-80 p-1 pb-0 text-white-60">
-              News
-            </span>{" "}
-            Portal
-          </h5>
-          <div>
-            <label
-              htmlFor="email"
-              className="mb-2 block text-sm font-medium text-gray-900 "
-            >
-              Your email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
-              placeholder="name@email.com"
-              value={credential.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="password"
-              className="mb-2 block text-sm font-medium text-gray-900"
-            >
-              Your password
-            </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
-              placeholder="••••••••"
-              value={credential.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full rounded-lg bg-black-80 px-5 py-2.5 text-center text-sm font-medium text-white-60 hover:bg-black-20 hover:text-white-80 focus:outline-none focus:ring-4 focus:ring-blue-300 "
-          >
-            Create account
-          </button>
-          <div className="text-sm font-medium text-gray-400 ">
-            have registered?{" "}
-            <Link to="/login" className="text-black-80 hover:underline ">
-              Login to your account
-            </Link>
-          </div>
-        </form>
-      </div>
-    </div>
+    <Form
+      title="Create account"
+      buttonText="Create account"
+      questionText="Have registered?"
+      redirectText="Login to your account"
+      page="register"
+      credential={credential}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
+    />
   );
 }
 

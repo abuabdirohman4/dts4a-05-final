@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { auth, register, login } from "./firebase";
+import { auth, register, login } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Form from "./form";
 import { useNavigate, useParams } from "react-router-dom";
@@ -37,11 +37,12 @@ function Auth() {
       const res = await login(credential.email, credential.password);
       console.log("res", res);
       // setPage("register");
-      navigate("/auth/register");
+      navigate("/");
     } else {
       const res = await register(credential.email, credential.password);
       console.log("res", res);
       console.log("user", user);
+      navigate("/auth/login");
 
       // if (user) {
       //   setPage("login");
