@@ -39,7 +39,7 @@ function AppRoutes() {
       >
         <Route index element={<Home />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:uuid" element={<Details />} />
       </Route>
     </Routes>
   );

@@ -16,7 +16,7 @@ function Home() {
             redux.map((data, index) => (
               <Card
                 key={index}
-                link={"/details"}
+                link={`/details/${data.uuid}`}
                 title={data.title}
                 published_at={data.published_at}
                 source={data.source}
