@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import imgFeatured from "../../assets/images/Featured.png";
 
-function Featured() {
+function Featured({ link }) {
   return (
     <div className="flex">
-      <a
-        href="/"
+      <Link
+        to={link}
         className="bg-white relative flex w-full flex-col items-center rounded-lg md:flex-row xl:w-[76%] xl:p-5 xl:pl-0"
       >
         <img
@@ -22,8 +23,11 @@ function Featured() {
             <p className="ml-6 inline">CNN Indonesia</p>
           </div>
         </div>
-      </a>
-      <div className="my-10 flex hidden w-[24%] flex-col justify-between p-4 font-playfair leading-normal xl:block">
+      </Link>
+      <Link
+        to={link}
+        className="my-10 flex hidden w-[24%] flex-col justify-between p-4 font-playfair leading-normal xl:block"
+      >
         <p className="mb-3 text-lg font-normal text-gray-700">
           Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam ornare
           adipiscing. Pellentesque sed turpis nunc gravida pharetra, sit nec
@@ -31,7 +35,7 @@ function Featured() {
           magnis. Massa tortor nibh nulla condimentum imperdiet scelerisque...
           read more
         </p>
-      </div>
+      </Link>
     </div>
   );
 }
